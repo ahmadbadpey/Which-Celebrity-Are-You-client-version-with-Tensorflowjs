@@ -1,0 +1,9 @@
+#user_pic{
+    /*display: none;*/
+    display: block;
+    margin-bottom: 10px;
+}
+#preview{
+    cursor: pointer;
+    display: none;
+}

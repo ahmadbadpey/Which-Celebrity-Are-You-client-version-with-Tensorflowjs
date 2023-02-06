@@ -1,0 +1,7 @@
+{
+  "name": "FaceRecognitionVGG",
+  "version": "1.0.0",
+  "dependencies": {
+    "@tensorflow/tfjs": "^1.7.3"
+  }
+}

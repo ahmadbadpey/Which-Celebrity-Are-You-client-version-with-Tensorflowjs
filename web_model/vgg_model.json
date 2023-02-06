@@ -1,0 +1,1473 @@
+{
+  "format": "layers-model",
+  "generatedBy": "keras v2.9.0",
+  "convertedBy": "TensorFlow.js Converter v3.19.0",
+  "modelTopology": {
+    "keras_version": "2.9.0",
+    "backend": "tensorflow",
+    "model_config": {
+      "class_name": "Model",
+      "config": {
+        "name": "vggface_vgg16",
+        "layers": [
+          {
+            "class_name": "InputLayer",
+            "config": {
+              "batch_input_shape": [
+                null,
+                224,
+                224,
+                3
+              ],
+              "dtype": "float32",
+              "sparse": false,
+              "ragged": false,
+              "name": "input_14"
+            },
+            "name": "input_14",
+            "inbound_nodes": []
+          },
+          {
+            "class_name": "Conv2D",
+            "config": {
+              "name": "conv1_1",
+              "trainable": true,
+              "dtype": "float32",
+              "filters": 64,
+              "kernel_size": [
+                3,
+                3
+              ],
+              "strides": [
+                1,
+                1
+              ],
+              "padding": "same",
+              "data_format": "channels_last",
+              "dilation_rate": [
+                1,
+                1
+              ],
+              "groups": 1,
+              "activation": "relu",
+              "use_bias": true,
+              "kernel_initializer": {
+                "class_name": "GlorotUniform",
+                "config": {
+                  "seed": null
+                }
+              },
+              "bias_initializer": {
+                "class_name": "Zeros",
+                "config": {}
+              },
+              "kernel_regularizer": null,
+              "bias_regularizer": null,
+              "activity_regularizer": null,
+              "kernel_constraint": null,
+              "bias_constraint": null
+            },
+            "name": "conv1_1",
+            "inbound_nodes": [
+              [
+                [
+                  "input_14",
+                  0,
+                  0,
+                  {}
+                ]
+              ]
+            ]
+          },
+          {
+            "class_name": "Conv2D",
+            "config": {
+              "name": "conv1_2",
+              "trainable": true,
+              "dtype": "float32",
+              "filters": 64,
+              "kernel_size": [
+                3,
+                3
+              ],
+              "strides": [
+                1,
+                1
+              ],
+              "padding": "same",
+              "data_format": "channels_last",
+              "dilation_rate": [
+                1,
+                1
+              ],
+              "groups": 1,
+              "activation": "relu",
+              "use_bias": true,
+              "kernel_initializer": {
+                "class_name": "GlorotUniform",
+                "config": {
+                  "seed": null
+                }
+              },
+              "bias_initializer": {
+                "class_name": "Zeros",
+                "config": {}
+              },
+              "kernel_regularizer": null,
+              "bias_regularizer": null,
+              "activity_regularizer": null,
+              "kernel_constraint": null,
+              "bias_constraint": null
+            },
+            "name": "conv1_2",
+            "inbound_nodes": [
+              [
+                [
+                  "conv1_1",
+                  0,
+                  0,
+                  {}
+                ]
+              ]
+            ]
+          },
+          {
+            "class_name": "MaxPooling2D",
+            "config": {
+              "name": "pool1",
+              "trainable": true,
+              "dtype": "float32",
+              "pool_size": [
+                2,
+                2
+              ],
+              "padding": "valid",
+              "strides": [
+                2,
+                2
+              ],
+              "data_format": "channels_last"
+            },
+            "name": "pool1",
+            "inbound_nodes": [
+              [
+                [
+                  "conv1_2",
+                  0,
+                  0,
+                  {}
+                ]
+              ]
+            ]
+          },
+          {
+            "class_name": "Conv2D",
+            "config": {
+              "name": "conv2_1",
+              "trainable": true,
+              "dtype": "float32",
+              "filters": 128,
+              "kernel_size": [
+                3,
+                3
+              ],
+              "strides": [
+                1,
+                1
+              ],
+              "padding": "same",
+              "data_format": "channels_last",
+              "dilation_rate": [
+                1,
+                1
+              ],
+              "groups": 1,
+              "activation": "relu",
+              "use_bias": true,
+              "kernel_initializer": {
+                "class_name": "GlorotUniform",
+                "config": {
+                  "seed": null
+                }
+              },
+              "bias_initializer": {
+                "class_name": "Zeros",
+                "config": {}
+              },
+              "kernel_regularizer": null,
+              "bias_regularizer": null,
+              "activity_regularizer": null,
+              "kernel_constraint": null,
+              "bias_constraint": null
+            },
+            "name": "conv2_1",
+            "inbound_nodes": [
+              [
+                [
+                  "pool1",
+                  0,
+                  0,
+                  {}
+                ]
+              ]
+            ]
+          },
+          {
+            "class_name": "Conv2D",
+            "config": {
+              "name": "conv2_2",
+              "trainable": true,
+              "dtype": "float32",
+              "filters": 128,
+              "kernel_size": [
+                3,
+                3
+              ],
+              "strides": [
+                1,
+                1
+              ],
+              "padding": "same",
+              "data_format": "channels_last",
+              "dilation_rate": [
+                1,
+                1
+              ],
+              "groups": 1,
+              "activation": "relu",
+              "use_bias": true,
+              "kernel_initializer": {
+                "class_name": "GlorotUniform",
+                "config": {
+                  "seed": null
+                }
+              },
+              "bias_initializer": {
+                "class_name": "Zeros",
+                "config": {}
+              },
+              "kernel_regularizer": null,
+              "bias_regularizer": null,
+              "activity_regularizer": null,
+              "kernel_constraint": null,
+              "bias_constraint": null
+            },
+            "name": "conv2_2",
+            "inbound_nodes": [
+              [
+                [
+                  "conv2_1",
+                  0,
+                  0,
+                  {}
+                ]
+              ]
+            ]
+          },
+          {
+            "class_name": "MaxPooling2D",
+            "config": {
+              "name": "pool2",
+              "trainable": true,
+              "dtype": "float32",
+              "pool_size": [
+                2,
+                2
+              ],
+              "padding": "valid",
+              "strides": [
+                2,
+                2
+              ],
+              "data_format": "channels_last"
+            },
+            "name": "pool2",
+            "inbound_nodes": [
+              [
+                [
+                  "conv2_2",
+                  0,
+                  0,
+                  {}
+                ]
+              ]
+            ]
+          },
+          {
+            "class_name": "Conv2D",
+            "config": {
+              "name": "conv3_1",
+              "trainable": true,
+              "dtype": "float32",
+              "filters": 256,
+              "kernel_size": [
+                3,
+                3
+              ],
+              "strides": [
+                1,
+                1
+              ],
+              "padding": "same",
+              "data_format": "channels_last",
+              "dilation_rate": [
+                1,
+                1
+              ],
+              "groups": 1,
+              "activation": "relu",
+              "use_bias": true,
+              "kernel_initializer": {
+                "class_name": "GlorotUniform",
+                "config": {
+                  "seed": null
+                }
+              },
+              "bias_initializer": {
+                "class_name": "Zeros",
+                "config": {}
+              },
+              "kernel_regularizer": null,
+              "bias_regularizer": null,
+              "activity_regularizer": null,
+              "kernel_constraint": null,
+              "bias_constraint": null
+            },
+            "name": "conv3_1",
+            "inbound_nodes": [
+              [
+                [
+                  "pool2",
+                  0,
+                  0,
+                  {}
+                ]
+              ]
+            ]
+          },
+          {
+            "class_name": "Conv2D",
+            "config": {
+              "name": "conv3_2",
+              "trainable": true,
+              "dtype": "float32",
+              "filters": 256,
+              "kernel_size": [
+                3,
+                3
+              ],
+              "strides": [
+                1,
+                1
+              ],
+              "padding": "same",
+              "data_format": "channels_last",
+              "dilation_rate": [
+                1,
+                1
+              ],
+              "groups": 1,
+              "activation": "relu",
+              "use_bias": true,
+              "kernel_initializer": {
+                "class_name": "GlorotUniform",
+                "config": {
+                  "seed": null
+                }
+              },
+              "bias_initializer": {
+                "class_name": "Zeros",
+                "config": {}
+              },
+              "kernel_regularizer": null,
+              "bias_regularizer": null,
+              "activity_regularizer": null,
+              "kernel_constraint": null,
+              "bias_constraint": null
+            },
+            "name": "conv3_2",
+            "inbound_nodes": [
+              [
+                [
+                  "conv3_1",
+                  0,
+                  0,
+                  {}
+                ]
+              ]
+            ]
+          },
+          {
+            "class_name": "Conv2D",
+            "config": {
+              "name": "conv3_3",
+              "trainable": true,
+              "dtype": "float32",
+              "filters": 256,
+              "kernel_size": [
+                3,
+                3
+              ],
+              "strides": [
+                1,
+                1
+              ],
+              "padding": "same",
+              "data_format": "channels_last",
+              "dilation_rate": [
+                1,
+                1
+              ],
+              "groups": 1,
+              "activation": "relu",
+              "use_bias": true,
+              "kernel_initializer": {
+                "class_name": "GlorotUniform",
+                "config": {
+                  "seed": null
+                }
+              },
+              "bias_initializer": {
+                "class_name": "Zeros",
+                "config": {}
+              },
+              "kernel_regularizer": null,
+              "bias_regularizer": null,
+              "activity_regularizer": null,
+              "kernel_constraint": null,
+              "bias_constraint": null
+            },
+            "name": "conv3_3",
+            "inbound_nodes": [
+              [
+                [
+                  "conv3_2",
+                  0,
+                  0,
+                  {}
+                ]
+              ]
+            ]
+          },
+          {
+            "class_name": "MaxPooling2D",
+            "config": {
+              "name": "pool3",
+              "trainable": true,
+              "dtype": "float32",
+              "pool_size": [
+                2,
+                2
+              ],
+              "padding": "valid",
+              "strides": [
+                2,
+                2
+              ],
+              "data_format": "channels_last"
+            },
+            "name": "pool3",
+            "inbound_nodes": [
+              [
+                [
+                  "conv3_3",
+                  0,
+                  0,
+                  {}
+                ]
+              ]
+            ]
+          },
+          {
+            "class_name": "Conv2D",
+            "config": {
+              "name": "conv4_1",
+              "trainable": true,
+              "dtype": "float32",
+              "filters": 512,
+              "kernel_size": [
+                3,
+                3
+              ],
+              "strides": [
+                1,
+                1
+              ],
+              "padding": "same",
+              "data_format": "channels_last",
+              "dilation_rate": [
+                1,
+                1
+              ],
+              "groups": 1,
+              "activation": "relu",
+              "use_bias": true,
+              "kernel_initializer": {
+                "class_name": "GlorotUniform",
+                "config": {
+                  "seed": null
+                }
+              },
+              "bias_initializer": {
+                "class_name": "Zeros",
+                "config": {}
+              },
+              "kernel_regularizer": null,
+              "bias_regularizer": null,
+              "activity_regularizer": null,
+              "kernel_constraint": null,
+              "bias_constraint": null
+            },
+            "name": "conv4_1",
+            "inbound_nodes": [
+              [
+                [
+                  "pool3",
+                  0,
+                  0,
+                  {}
+                ]
+              ]
+            ]
+          },
+          {
+            "class_name": "Conv2D",
+            "config": {
+              "name": "conv4_2",
+              "trainable": true,
+              "dtype": "float32",
+              "filters": 512,
+              "kernel_size": [
+                3,
+                3
+              ],
+              "strides": [
+                1,
+                1
+              ],
+              "padding": "same",
+              "data_format": "channels_last",
+              "dilation_rate": [
+                1,
+                1
+              ],
+              "groups": 1,
+              "activation": "relu",
+              "use_bias": true,
+              "kernel_initializer": {
+                "class_name": "GlorotUniform",
+                "config": {
+                  "seed": null
+                }
+              },
+              "bias_initializer": {
+                "class_name": "Zeros",
+                "config": {}
+              },
+              "kernel_regularizer": null,
+              "bias_regularizer": null,
+              "activity_regularizer": null,
+              "kernel_constraint": null,
+              "bias_constraint": null
+            },
+            "name": "conv4_2",
+            "inbound_nodes": [
+              [
+                [
+                  "conv4_1",
+                  0,
+                  0,
+                  {}
+                ]
+              ]
+            ]
+          },
+          {
+            "class_name": "Conv2D",
+            "config": {
+              "name": "conv4_3",
+              "trainable": true,
+              "dtype": "float32",
+              "filters": 512,
+              "kernel_size": [
+                3,
+                3
+              ],
+              "strides": [
+                1,
+                1
+              ],
+              "padding": "same",
+              "data_format": "channels_last",
+              "dilation_rate": [
+                1,
+                1
+              ],
+              "groups": 1,
+              "activation": "relu",
+              "use_bias": true,
+              "kernel_initializer": {
+                "class_name": "GlorotUniform",
+                "config": {
+                  "seed": null
+                }
+              },
+              "bias_initializer": {
+                "class_name": "Zeros",
+                "config": {}
+              },
+              "kernel_regularizer": null,
+              "bias_regularizer": null,
+              "activity_regularizer": null,
+              "kernel_constraint": null,
+              "bias_constraint": null
+            },
+            "name": "conv4_3",
+            "inbound_nodes": [
+              [
+                [
+                  "conv4_2",
+                  0,
+                  0,
+                  {}
+                ]
+              ]
+            ]
+          },
+          {
+            "class_name": "MaxPooling2D",
+            "config": {
+              "name": "pool4",
+              "trainable": true,
+              "dtype": "float32",
+              "pool_size": [
+                2,
+                2
+              ],
+              "padding": "valid",
+              "strides": [
+                2,
+                2
+              ],
+              "data_format": "channels_last"
+            },
+            "name": "pool4",
+            "inbound_nodes": [
+              [
+                [
+                  "conv4_3",
+                  0,
+                  0,
+                  {}
+                ]
+              ]
+            ]
+          },
+          {
+            "class_name": "Conv2D",
+            "config": {
+              "name": "conv5_1",
+              "trainable": true,
+              "dtype": "float32",
+              "filters": 512,
+              "kernel_size": [
+                3,
+                3
+              ],
+              "strides": [
+                1,
+                1
+              ],
+              "padding": "same",
+              "data_format": "channels_last",
+              "dilation_rate": [
+                1,
+                1
+              ],
+              "groups": 1,
+              "activation": "relu",
+              "use_bias": true,
+              "kernel_initializer": {
+                "class_name": "GlorotUniform",
+                "config": {
+                  "seed": null
+                }
+              },
+              "bias_initializer": {
+                "class_name": "Zeros",
+                "config": {}
+              },
+              "kernel_regularizer": null,
+              "bias_regularizer": null,
+              "activity_regularizer": null,
+              "kernel_constraint": null,
+              "bias_constraint": null
+            },
+            "name": "conv5_1",
+            "inbound_nodes": [
+              [
+                [
+                  "pool4",
+                  0,
+                  0,
+                  {}
+                ]
+              ]
+            ]
+          },
+          {
+            "class_name": "Conv2D",
+            "config": {
+              "name": "conv5_2",
+              "trainable": true,
+              "dtype": "float32",
+              "filters": 512,
+              "kernel_size": [
+                3,
+                3
+              ],
+              "strides": [
+                1,
+                1
+              ],
+              "padding": "same",
+              "data_format": "channels_last",
+              "dilation_rate": [
+                1,
+                1
+              ],
+              "groups": 1,
+              "activation": "relu",
+              "use_bias": true,
+              "kernel_initializer": {
+                "class_name": "GlorotUniform",
+                "config": {
+                  "seed": null
+                }
+              },
+              "bias_initializer": {
+                "class_name": "Zeros",
+                "config": {}
+              },
+              "kernel_regularizer": null,
+              "bias_regularizer": null,
+              "activity_regularizer": null,
+              "kernel_constraint": null,
+              "bias_constraint": null
+            },
+            "name": "conv5_2",
+            "inbound_nodes": [
+              [
+                [
+                  "conv5_1",
+                  0,
+                  0,
+                  {}
+                ]
+              ]
+            ]
+          },
+          {
+            "class_name": "Conv2D",
+            "config": {
+              "name": "conv5_3",
+              "trainable": true,
+              "dtype": "float32",
+              "filters": 512,
+              "kernel_size": [
+                3,
+                3
+              ],
+              "strides": [
+                1,
+                1
+              ],
+              "padding": "same",
+              "data_format": "channels_last",
+              "dilation_rate": [
+                1,
+                1
+              ],
+              "groups": 1,
+              "activation": "relu",
+              "use_bias": true,
+              "kernel_initializer": {
+                "class_name": "GlorotUniform",
+                "config": {
+                  "seed": null
+                }
+              },
+              "bias_initializer": {
+                "class_name": "Zeros",
+                "config": {}
+              },
+              "kernel_regularizer": null,
+              "bias_regularizer": null,
+              "activity_regularizer": null,
+              "kernel_constraint": null,
+              "bias_constraint": null
+            },
+            "name": "conv5_3",
+            "inbound_nodes": [
+              [
+                [
+                  "conv5_2",
+                  0,
+                  0,
+                  {}
+                ]
+              ]
+            ]
+          },
+          {
+            "class_name": "MaxPooling2D",
+            "config": {
+              "name": "pool5",
+              "trainable": true,
+              "dtype": "float32",
+              "pool_size": [
+                2,
+                2
+              ],
+              "padding": "valid",
+              "strides": [
+                2,
+                2
+              ],
+              "data_format": "channels_last"
+            },
+            "name": "pool5",
+            "inbound_nodes": [
+              [
+                [
+                  "conv5_3",
+                  0,
+                  0,
+                  {}
+                ]
+              ]
+            ]
+          },
+          {
+            "class_name": "Flatten",
+            "config": {
+              "name": "flatten",
+              "trainable": true,
+              "dtype": "float32",
+              "data_format": "channels_last"
+            },
+            "name": "flatten",
+            "inbound_nodes": [
+              [
+                [
+                  "pool5",
+                  0,
+                  0,
+                  {}
+                ]
+              ]
+            ]
+          },
+          {
+            "class_name": "Dense",
+            "config": {
+              "name": "fc6",
+              "trainable": true,
+              "dtype": "float32",
+              "units": 4096,
+              "activation": "linear",
+              "use_bias": true,
+              "kernel_initializer": {
+                "class_name": "GlorotUniform",
+                "config": {
+                  "seed": null
+                }
+              },
+              "bias_initializer": {
+                "class_name": "Zeros",
+                "config": {}
+              },
+              "kernel_regularizer": null,
+              "bias_regularizer": null,
+              "activity_regularizer": null,
+              "kernel_constraint": null,
+              "bias_constraint": null
+            },
+            "name": "fc6",
+            "inbound_nodes": [
+              [
+                [
+                  "flatten",
+                  0,
+                  0,
+                  {}
+                ]
+              ]
+            ]
+          },
+          {
+            "class_name": "Activation",
+            "config": {
+              "name": "fc6/relu",
+              "trainable": true,
+              "dtype": "float32",
+              "activation": "relu"
+            },
+            "name": "fc6/relu",
+            "inbound_nodes": [
+              [
+                [
+                  "fc6",
+                  0,
+                  0,
+                  {}
+                ]
+              ]
+            ]
+          },
+          {
+            "class_name": "Dense",
+            "config": {
+              "name": "fc7",
+              "trainable": true,
+              "dtype": "float32",
+              "units": 4096,
+              "activation": "linear",
+              "use_bias": true,
+              "kernel_initializer": {
+                "class_name": "GlorotUniform",
+                "config": {
+                  "seed": null
+                }
+              },
+              "bias_initializer": {
+                "class_name": "Zeros",
+                "config": {}
+              },
+              "kernel_regularizer": null,
+              "bias_regularizer": null,
+              "activity_regularizer": null,
+              "kernel_constraint": null,
+              "bias_constraint": null
+            },
+            "name": "fc7",
+            "inbound_nodes": [
+              [
+                [
+                  "fc6/relu",
+                  0,
+                  0,
+                  {}
+                ]
+              ]
+            ]
+          },
+          {
+            "class_name": "Activation",
+            "config": {
+              "name": "fc7/relu",
+              "trainable": true,
+              "dtype": "float32",
+              "activation": "relu"
+            },
+            "name": "fc7/relu",
+            "inbound_nodes": [
+              [
+                [
+                  "fc7",
+                  0,
+                  0,
+                  {}
+                ]
+              ]
+            ]
+          },
+          {
+            "class_name": "Dense",
+            "config": {
+              "name": "fc8",
+              "trainable": true,
+              "dtype": "float32",
+              "units": 2622,
+              "activation": "linear",
+              "use_bias": true,
+              "kernel_initializer": {
+                "class_name": "GlorotUniform",
+                "config": {
+                  "seed": null
+                }
+              },
+              "bias_initializer": {
+                "class_name": "Zeros",
+                "config": {}
+              },
+              "kernel_regularizer": null,
+              "bias_regularizer": null,
+              "activity_regularizer": null,
+              "kernel_constraint": null,
+              "bias_constraint": null
+            },
+            "name": "fc8",
+            "inbound_nodes": [
+              [
+                [
+                  "fc7/relu",
+                  0,
+                  0,
+                  {}
+                ]
+              ]
+            ]
+          },
+          {
+            "class_name": "Activation",
+            "config": {
+              "name": "fc8/softmax",
+              "trainable": true,
+              "dtype": "float32",
+              "activation": "softmax"
+            },
+            "name": "fc8/softmax",
+            "inbound_nodes": [
+              [
+                [
+                  "fc8",
+                  0,
+                  0,
+                  {}
+                ]
+              ]
+            ]
+          }
+        ],
+        "input_layers": [
+          [
+            "input_14",
+            0,
+            0
+          ]
+        ],
+        "output_layers": [
+          [
+            "fc8/softmax",
+            0,
+            0
+          ]
+        ]
+      }
+    }
+  },
+  "weightsManifest": [
+    {
+      "paths": [
+        "group1-shard1of139.bin",
+        "group1-shard2of139.bin",
+        "group1-shard3of139.bin",
+        "group1-shard4of139.bin",
+        "group1-shard5of139.bin",
+        "group1-shard6of139.bin",
+        "group1-shard7of139.bin",
+        "group1-shard8of139.bin",
+        "group1-shard9of139.bin",
+        "group1-shard10of139.bin",
+        "group1-shard11of139.bin",
+        "group1-shard12of139.bin",
+        "group1-shard13of139.bin",
+        "group1-shard14of139.bin",
+        "group1-shard15of139.bin",
+        "group1-shard16of139.bin",
+        "group1-shard17of139.bin",
+        "group1-shard18of139.bin",
+        "group1-shard19of139.bin",
+        "group1-shard20of139.bin",
+        "group1-shard21of139.bin",
+        "group1-shard22of139.bin",
+        "group1-shard23of139.bin",
+        "group1-shard24of139.bin",
+        "group1-shard25of139.bin",
+        "group1-shard26of139.bin",
+        "group1-shard27of139.bin",
+        "group1-shard28of139.bin",
+        "group1-shard29of139.bin",
+        "group1-shard30of139.bin",
+        "group1-shard31of139.bin",
+        "group1-shard32of139.bin",
+        "group1-shard33of139.bin",
+        "group1-shard34of139.bin",
+        "group1-shard35of139.bin",
+        "group1-shard36of139.bin",
+        "group1-shard37of139.bin",
+        "group1-shard38of139.bin",
+        "group1-shard39of139.bin",
+        "group1-shard40of139.bin",
+        "group1-shard41of139.bin",
+        "group1-shard42of139.bin",
+        "group1-shard43of139.bin",
+        "group1-shard44of139.bin",
+        "group1-shard45of139.bin",
+        "group1-shard46of139.bin",
+        "group1-shard47of139.bin",
+        "group1-shard48of139.bin",
+        "group1-shard49of139.bin",
+        "group1-shard50of139.bin",
+        "group1-shard51of139.bin",
+        "group1-shard52of139.bin",
+        "group1-shard53of139.bin",
+        "group1-shard54of139.bin",
+        "group1-shard55of139.bin",
+        "group1-shard56of139.bin",
+        "group1-shard57of139.bin",
+        "group1-shard58of139.bin",
+        "group1-shard59of139.bin",
+        "group1-shard60of139.bin",
+        "group1-shard61of139.bin",
+        "group1-shard62of139.bin",
+        "group1-shard63of139.bin",
+        "group1-shard64of139.bin",
+        "group1-shard65of139.bin",
+        "group1-shard66of139.bin",
+        "group1-shard67of139.bin",
+        "group1-shard68of139.bin",
+        "group1-shard69of139.bin",
+        "group1-shard70of139.bin",
+        "group1-shard71of139.bin",
+        "group1-shard72of139.bin",
+        "group1-shard73of139.bin",
+        "group1-shard74of139.bin",
+        "group1-shard75of139.bin",
+        "group1-shard76of139.bin",
+        "group1-shard77of139.bin",
+        "group1-shard78of139.bin",
+        "group1-shard79of139.bin",
+        "group1-shard80of139.bin",
+        "group1-shard81of139.bin",
+        "group1-shard82of139.bin",
+        "group1-shard83of139.bin",
+        "group1-shard84of139.bin",
+        "group1-shard85of139.bin",
+        "group1-shard86of139.bin",
+        "group1-shard87of139.bin",
+        "group1-shard88of139.bin",
+        "group1-shard89of139.bin",
+        "group1-shard90of139.bin",
+        "group1-shard91of139.bin",
+        "group1-shard92of139.bin",
+        "group1-shard93of139.bin",
+        "group1-shard94of139.bin",
+        "group1-shard95of139.bin",
+        "group1-shard96of139.bin",
+        "group1-shard97of139.bin",
+        "group1-shard98of139.bin",
+        "group1-shard99of139.bin",
+        "group1-shard100of139.bin",
+        "group1-shard101of139.bin",
+        "group1-shard102of139.bin",
+        "group1-shard103of139.bin",
+        "group1-shard104of139.bin",
+        "group1-shard105of139.bin",
+        "group1-shard106of139.bin",
+        "group1-shard107of139.bin",
+        "group1-shard108of139.bin",
+        "group1-shard109of139.bin",
+        "group1-shard110of139.bin",
+        "group1-shard111of139.bin",
+        "group1-shard112of139.bin",
+        "group1-shard113of139.bin",
+        "group1-shard114of139.bin",
+        "group1-shard115of139.bin",
+        "group1-shard116of139.bin",
+        "group1-shard117of139.bin",
+        "group1-shard118of139.bin",
+        "group1-shard119of139.bin",
+        "group1-shard120of139.bin",
+        "group1-shard121of139.bin",
+        "group1-shard122of139.bin",
+        "group1-shard123of139.bin",
+        "group1-shard124of139.bin",
+        "group1-shard125of139.bin",
+        "group1-shard126of139.bin",
+        "group1-shard127of139.bin",
+        "group1-shard128of139.bin",
+        "group1-shard129of139.bin",
+        "group1-shard130of139.bin",
+        "group1-shard131of139.bin",
+        "group1-shard132of139.bin",
+        "group1-shard133of139.bin",
+        "group1-shard134of139.bin",
+        "group1-shard135of139.bin",
+        "group1-shard136of139.bin",
+        "group1-shard137of139.bin",
+        "group1-shard138of139.bin",
+        "group1-shard139of139.bin"
+      ],
+      "weights": [
+        {
+          "name": "conv1_1/kernel",
+          "shape": [
+            3,
+            3,
+            3,
+            64
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "conv1_1/bias",
+          "shape": [
+            64
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "conv1_2/kernel",
+          "shape": [
+            3,
+            3,
+            64,
+            64
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "conv1_2/bias",
+          "shape": [
+            64
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "conv2_1/kernel",
+          "shape": [
+            3,
+            3,
+            64,
+            128
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "conv2_1/bias",
+          "shape": [
+            128
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "conv2_2/kernel",
+          "shape": [
+            3,
+            3,
+            128,
+            128
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "conv2_2/bias",
+          "shape": [
+            128
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "conv3_1/kernel",
+          "shape": [
+            3,
+            3,
+            128,
+            256
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "conv3_1/bias",
+          "shape": [
+            256
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "conv3_2/kernel",
+          "shape": [
+            3,
+            3,
+            256,
+            256
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "conv3_2/bias",
+          "shape": [
+            256
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "conv3_3/kernel",
+          "shape": [
+            3,
+            3,
+            256,
+            256
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "conv3_3/bias",
+          "shape": [
+            256
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "conv4_1/kernel",
+          "shape": [
+            3,
+            3,
+            256,
+            512
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "conv4_1/bias",
+          "shape": [
+            512
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "conv4_2/kernel",
+          "shape": [
+            3,
+            3,
+            512,
+            512
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "conv4_2/bias",
+          "shape": [
+            512
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "conv4_3/kernel",
+          "shape": [
+            3,
+            3,
+            512,
+            512
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "conv4_3/bias",
+          "shape": [
+            512
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "conv5_1/kernel",
+          "shape": [
+            3,
+            3,
+            512,
+            512
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "conv5_1/bias",
+          "shape": [
+            512
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "conv5_2/kernel",
+          "shape": [
+            3,
+            3,
+            512,
+            512
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "conv5_2/bias",
+          "shape": [
+            512
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "conv5_3/kernel",
+          "shape": [
+            3,
+            3,
+            512,
+            512
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "conv5_3/bias",
+          "shape": [
+            512
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fc6/kernel",
+          "shape": [
+            25088,
+            4096
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fc6/bias",
+          "shape": [
+            4096
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fc7/kernel",
+          "shape": [
+            4096,
+            4096
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fc7/bias",
+          "shape": [
+            4096
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fc8/kernel",
+          "shape": [
+            4096,
+            2622
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "fc8/bias",
+          "shape": [
+            2622
+          ],
+          "dtype": "float32"
+        }
+      ]
+    }
+  ]
+}
